@@ -204,6 +204,11 @@
 #ifdef USERMOD_STAIRCASE_WIPE
 #include "../usermods/stairway_wipe_basic/stairway-wipe-usermod-v2.h"
 #endif
+
+#ifdef USERMOD_ROTARY_ENCODER_TREE
+#include "../usermods/usermod_rotary_encoder_tree/usermod_rotary_encoder_tree.h"
+#endif
+
 void registerUsermods()
 {
 /*
@@ -387,4 +392,9 @@ void registerUsermods()
   #ifdef USERMOD_STAIRCASE_WIPE
   usermods.add(new StairwayWipeUsermod());
   #endif
+
+  #ifdef USERMOD_ROTARY_ENCODER_TREE
+  usermods.add(new UsermodRotaryEncoderTree());
+  #endif
+
 }
