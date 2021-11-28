@@ -104,6 +104,10 @@
 #include "../usermods/quinled-an-penta/quinled-an-penta.h"
 #endif
 
+#ifdef USERMOD_ROTARY_ENCODER_TREE
+#include "../usermods/usermod_rotary_encoder_tree/usermod_rotary_encoder_tree.h"
+#endif
+
 void registerUsermods()
 {
 /*
@@ -195,4 +199,9 @@ void registerUsermods()
   #ifdef QUINLED_AN_PENTA
   usermods.add(new QuinLEDAnPentaUsermod());
   #endif
+
+  #ifdef USERMOD_ROTARY_ENCODER_TREE
+  usermods.add(new UsermodRotaryEncoderTree());
+  #endif
+
 }
