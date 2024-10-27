@@ -242,6 +242,10 @@
 #include "../usermods/LD2410_v2/usermod_ld2410.h"
 #endif
 
+#ifdef USERMOD_ROTARY_ENCODER_TREE
+#include "../usermods/rotary_encoder_tree/rotary_encoder_tree.h"
+#endif
+
 void registerUsermods()
 {
 /*
@@ -469,5 +473,9 @@ void registerUsermods()
 
   #ifdef USERMOD_POV_DISPLAY
   UsermodManager::add(new PovDisplayUsermod());
+  #endif
+
+  #ifdef USERMOD_ROTARY_ENCODER_TREE
+  UsermodManager::add(new RotaryEncoderTree());
   #endif
 }
